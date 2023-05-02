@@ -1,4 +1,4 @@
-import { Href } from "../Href/Href"
+import { Link } from "react-router-dom"
 import { Item } from "../Item"
 
 export function List({userData}) {
@@ -7,7 +7,7 @@ export function List({userData}) {
             {userData && userData.map((user, index) =>(
             <Item>
                 <p>{user.id}</p>
-                <Href url={`/user/${user.id}`}>{user.first_name}</Href>
+               <Link to={`/user/${user.id}`}>{user.first_name}</Link> 
             </Item>
             ))}
         </ul>

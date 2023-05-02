@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 export function Profil({ userData }) {
     let { userId } = useParams()
 
-    let foundUser = userData.find(user => user.id = userId)
+    let foundUser = userData.find(user => user.id == userId)
     return (
         <>
             {
